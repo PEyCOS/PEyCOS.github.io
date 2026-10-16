@@ -5,8 +5,9 @@ site_description: Semillero de Investigación en Física de Altas Energías y Ó
 theme:
   name: material
   language: es
+  logo: assets/logo.jpeg
+  favicon: assets/logo.jpeg
   palette:
-    # Modo Claro
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: deep orange
@@ -14,7 +15,6 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Cambiar a modo oscuro
-    # Modo Oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep orange
@@ -22,6 +22,13 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
   features:
     - navigation.tabs
     - navigation.sections
