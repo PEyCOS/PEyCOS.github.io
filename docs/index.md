@@ -1,4 +1,4 @@
-# Bienvenida al Semillero PEYCOS
+# Semillero de Física de Partículas y Cosmología
 
 El **Semillero de Investigación PEYCOS** de la Universidad del Atlántico está dedicado al estudio teórico, formal y computacional en las áreas de cosmología, física de partículas, astropartículas y gravitación.
 
