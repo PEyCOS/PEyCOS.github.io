@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
+
+:root {
+  --peycos-heading: "Newsreader", Georgia, serif;
+}
+
+/* Titulares en serif; el cuerpo conserva la tipografía sans del tema */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: var(--peycos-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-size: 1.8em;
+  margin: 2.6em 0 0.8em;
+}
+
+.md-typeset p {
+  max-width: 68ch;
+}
+
+/* Portada */
+.hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0 0.5rem;
+}
+
+@media (min-width: 60em) {
+  .hero {
+    grid-template-columns: 1.15fr 0.85fr;
+    padding: 3.5rem 0 1.5rem;
+  }
+}
+
+.md-typeset .hero h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  line-height: 1.08;
+  margin: 0 0 1rem;
+}
+
+.hero__text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+  max-width: 52ch;
+}
+
+.hero__text .md-button {
+  margin: 0.6rem 0.4rem 0 0;
+}
+
+/* Ilustración: anillo de Einstein */
+.hero__figure {
+  color: var(--md-primary-fg-color);
+  justify-self: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+.lens {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lens__lensed {
+  stroke: var(--md-accent-fg-color);
+}
+
+.lens__ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: lens-drift 140s linear infinite;
+}
+
+@keyframes lens-drift {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lens__ring {
+    animation: none;
+  }
+}
+
+/* Tarjetas de líneas de investigación */
+.md-typeset .grid.cards > ul > li {
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-left: 0.22rem solid var(--md-primary-fg-color);
+  border-radius: 0.2rem;
+  box-shadow: none;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: none;
+}
+
+.md-typeset .grid.cards > ul > li > p:first-child strong {
+  font-family: var(--peycos-heading);
+  font-size: 1.15em;
+}
+
+/* Cierre de la portada */
+.peycos-links {
+  margin-top: 2.6rem;
+  padding-top: 1.2rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
